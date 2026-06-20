@@ -160,6 +160,48 @@ p{ margin:0; }
 .nav-toggle span::before{ position:absolute; top:-7px; }
 .nav-toggle span::after{ position:absolute; top:7px; }
 
+
+/* =========================================================
+   МОБИЛЬНОЕ МЕНЮ (nav--open)
+   ========================================================= */
+.nav--open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(11,16,36,0.78);
+    padding: 20px 24px;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.nav--open a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: color 0.3s;
+}
+
+.nav--open a:hover {
+    color: #fff !important;
+}
+
+@media (max-width: 760px) {
+    .nav {
+        display: none;
+    }
+    .nav--open {
+        display: flex !important;
+    }
+}
+
+
+
 /* =========================================================
    STARRY CANVAS BACKDROP (signature element)
    ========================================================= */
